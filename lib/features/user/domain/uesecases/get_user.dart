@@ -8,7 +8,8 @@ class GetUser {
   final UserRepository repository;
 
   GetUser({required this.repository});
-  Future<Either<Failure,UserEntity>> call ({required UserParams userID}){
-    return repository.getUser(userID: userID);
+
+  Future<Either<Failure, UserEntity>> call({required UserParams params}) {
+    return repository.getUser(params: params);
   }
 }
